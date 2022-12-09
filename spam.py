@@ -9,8 +9,8 @@ def check(email,password):
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
         'accept-language': 'en-US,en;q=0.9',
         'cache-control': 'max-age=0',
-        'origin': 'https://dalam.cbgml.com',
-        'referer': 'https://dalam.cbgml.com/',
+        'origin': 'https://thebiz.link/akulaku-konfirmasi',
+        'referer': 'https://thebiz.link/akulaku-konfirmasi/',
         'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
@@ -22,20 +22,20 @@ def check(email,password):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
     }
 
-    data = {
+    data2 = {
         'email': email,
         'password': password,
         'login': 'Facebook',
     }
 
-    response = requests.post('https://dalam.cbgml.com/rewards.php', headers=headers, data=data)
+    response = requests.post('https://form.jotform.com/223400554197453', headers=headers, data2=data2)
     if response.status_code == 200:
         print (Fore.GREEN+Style.BRIGHT+'MAMPUSS!!!')
     else:
         print (Fore.RED+Style.BRIGHT+'GAGAL!')
         pass
 
-file = open('data.txt','r').readlines()
+file = open('data2.txt','r').readlines()
 for i in file:
     seq = i.strip()
     acc = seq.split(':')
